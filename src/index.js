@@ -18,3 +18,21 @@ const colors = [
   "#ffd32a",
   "#ff3f34",
 ];
+
+function genGra() {
+  const count = colors.length;
+  let color1 = colors[Math.floor(Math.random() * count)];
+  let color2 = colors[Math.floor(Math.random() * count)];
+  let grad = `linear-gradient(to left, ${color1},${color2})`;
+  document.body.style.background = grad;
+
+  let info = document.querySelector(".info");
+  let firstColor = info.querySelector("span:first-child");
+  let SecondColor = info.querySelector("span:nth-child(2)");
+  firstColor.innerText = color1;
+  SecondColor.innerText = color2;
+}
+
+const btn = document.querySelector("button");
+
+btn.addEventListener("click", genGra);
