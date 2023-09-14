@@ -20,6 +20,7 @@ button {
   border-radius: 10px;
   font-size: 20px;
   cursor: pointer;
+  width: 233px;
 }
 
 button::before {
@@ -35,6 +36,8 @@ button::before {
 .wrap {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .info {
